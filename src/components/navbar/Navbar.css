@@ -1,0 +1,30 @@
+.header {
+  background-color: #218380;
+  color: white;
+  padding: 1.5em;
+  display: flex;
+}
+
+.equalHW {
+  flex: 1;
+  color: white;
+  text-decoration: none;
+}
+
+.highscore-link:hover,
+.highscore-link:focus,
+.highscore-link:active {
+  color: whitesmoke;
+}
+
+.logo {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active {
+  color: whitesmoke;
+}

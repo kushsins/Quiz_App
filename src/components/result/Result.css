@@ -1,0 +1,17 @@
+.input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-submit {
+  flex: 1;
+  margin-left: 0.5em;
+}
+
+.input {
+  flex: 3;
+}
+
+p {
+  font-size: 1.2em;
+}

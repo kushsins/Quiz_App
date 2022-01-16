@@ -1,0 +1,40 @@
+.container-fluid {
+  padding: 35% 5%;
+}
+
+.card {
+  padding: 4% 4%;
+  box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+}
+
+.btn-primary {
+  background-color: #218380;
+  border-radius: 0.5em;
+  border-color: #218380;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #49c0bc;
+  border-color: #49c0bc; /*set the color you want here*/
+}
+
+.text-holder {
+  margin: 2em 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .container-fluid {
+    padding: 30% 7%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-fluid {
+    padding: 15% 7%;
+    width: 100%;
+  }
+}

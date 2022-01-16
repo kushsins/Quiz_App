@@ -1,0 +1,16 @@
+.btn-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-back {
+  flex: 1;
+  margin: 2%;
+  font-size: 1.1em;
+}
+
+.btn-clear {
+  flex: 2;
+  margin: 2%;
+  font-size: 1.1em;
+}
