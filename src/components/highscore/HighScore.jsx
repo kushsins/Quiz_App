@@ -23,7 +23,7 @@ const Highscore = () => {
 
         <div className="container-fluid">
             <div className="card" >
-                <div className="card-body">
+                <div className="card-body highscore-details">
                         <h2 className="card-title">HighScores</h2>
                         <div className='highscores'>
                             { highScoreStatus ? `NO HIGHSCORES YET` : highScore.map((highScore, number = 0) => (
