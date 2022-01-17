@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import './QuizPage.css'
 import questions from '../../script'
 import {useNavigate} from 'react-router-dom'
@@ -21,14 +21,28 @@ const QuizPage = ({setScore}) => {
     const [clicker, setClicker] = useState(0);
     const [corretAnswerCount, setCorretAnswerCount] = useState(0);
     
+    
+    
+    
+
+    const finishQuiz = useCallback(
+        () => {
+            navigate("/result");
+            setScore(counter*corretAnswerCount);
+        },[corretAnswerCount, counter,navigate,setScore]
+    )
+        
+        
+
+    
     useEffect(() => {
         if(counter <= 0){
             finishQuiz();
         }
         const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
         return () => clearInterval(timer);
-    }, [counter]);
-    
+    }, [counter, finishQuiz]);
+
     const nextQuestion = () => {
         setClicker(0);
         setClickedId(-1);
@@ -41,13 +55,6 @@ const QuizPage = ({setScore}) => {
            finishQuiz();
         }
         
-    }
-
-    const finishQuiz = () => {
-        navigate("/result");
-        setScore(counter*corretAnswerCount);
-        
-
     }
 
 
